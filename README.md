@@ -64,10 +64,10 @@ npm install
 ### 3. Setup Environment Variables
 Create a .env.local file with:
 
-MONGO_URI=your_mongo_uri
-NEXTAUTH_SECRET="your_nextauth_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
+- MONGO_URI=your_mongo_uri
+- NEXTAUTH_SECRET="your_nextauth_secret
+- GOOGLE_CLIENT_ID=your_google_client_id
+- GOOGLE_CLIENT_SECRET=your_google_client_secret
 
 
 ### 4. Run the app
