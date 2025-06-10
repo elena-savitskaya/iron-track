@@ -18,13 +18,13 @@ export default function AuthPage() {
         <div className="w-full flex-1 flex items-center justify-center gap-2">
           <Link
             href="/auth/signin"
-            className="px-1 py-2 w-full rounded-2xl flex border bg-black text-white hover:bg-black/95 items-center shadow-md justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all"
+            className="h-9 px-1 py-2 w-full rounded-2xl flex border bg-black text-white hover:bg-black/95 items-center shadow-md justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all"
           >
             Увійти
           </Link>
           <Link
             href="/auth/register"
-            className="px-1 py-2 w-full rounded-2xl flex  border bg-white text-black hover:bg-white/95 items-center shadow-md justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all"
+            className="h-9 px-1 py-2 w-full rounded-2xl flex  border bg-white text-black hover:bg-white/95 items-center shadow-md justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all"
           >
             Зареєструватися
           </Link>

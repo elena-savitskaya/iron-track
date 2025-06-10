@@ -177,7 +177,7 @@ export default function NewWorkoutPage() {
       <h1 className="text-xl font-bold">Нове тренування</h1>
       {!category ? (
         <div className="flex flex-col gap-2">
-          <label className="block text-sm font-medium">Група м’язів</label>
+          <label className="block text-lg font-medium">Група м’язів</label>
           <Select
             onValueChange={(value) => {
               setStartTime(0);
@@ -212,17 +212,17 @@ export default function NewWorkoutPage() {
           </Select>
         </div>
       ) : (
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
               <label className="block text-lg">Група м’язів:</label>
               <h2 className="text-lg font-semibold">{category}</h2>
             </div>
-            <div className="flex flex-col items-center justify-center gap-2 py-2">
+            <div className="flex flex-col items-center justify-center gap-3 py-2">
               <CommonTimer elapsedSeconds={elapsed} />
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
             <Select
               value={exerciseName}
               onValueChange={(value) => setExerciseName(value)}
@@ -252,7 +252,7 @@ export default function NewWorkoutPage() {
             )}
 
             {sets.map((set, idx) => (
-              <div key={idx} className="flex gap-2 items-center">
+              <div key={idx} className="flex gap-3 items-center">
                 <Input
                   type="number"
                   placeholder="Повторення"
@@ -273,7 +273,7 @@ export default function NewWorkoutPage() {
                 />
                 <Trash
                   onClick={() => removeSet(sets, setSets, idx)}
-                  className="cursor-pointer shrink-0 h-4 w-4"
+                  className="cursor-pointer shrink-0 h-6 w-6"
                 />
               </div>
             ))}
@@ -284,7 +284,7 @@ export default function NewWorkoutPage() {
               aria-label="Додати підхід"
               title="Додати підхід"
             >
-              <Plus className="h-4 w-4" /> Додати підхід
+              <Plus className="h-6 w-6" /> Додати підхід
             </Button>
             <Button type="submit" disabled={!exerciseName}>
               Зберегти вправу
@@ -306,7 +306,7 @@ export default function NewWorkoutPage() {
                   }}
                 />
                 {editingIndex === index ? (
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-3">
                     <strong>{ex.name}</strong>
                     {editedSets.map((set, idx) => (
                       <div key={idx} className="flex gap-2 items-center pt-3">
@@ -344,7 +344,7 @@ export default function NewWorkoutPage() {
                           onClick={() =>
                             removeSet(editedSets, setEditedSets, idx)
                           }
-                          className="cursor-pointer shrink-0 h-4 w-4"
+                          className="cursor-pointer shrink-0 h-6 w-6"
                         />
                       </div>
                     ))}
@@ -353,7 +353,7 @@ export default function NewWorkoutPage() {
                       size="sm"
                       onClick={() => addSet(editedSets, setEditedSets)}
                     >
-                      <Plus className="h-4 w-4" /> Додати підхід
+                      <Plus className="h-6 w-6" /> Додати підхід
                     </Button>
                     <div className="flex gap-2 mt-2">
                       <Button size="sm" onClick={saveEditing}>
@@ -389,9 +389,9 @@ export default function NewWorkoutPage() {
               </li>
             ))}
           </ul>
-          <div className="flex flex-col gap-2 pb-4">
+          <div className="flex flex-col gap-3 pb-4">
             <label className="text-md font-medium flex items-center gap-2">
-              <NotebookPen className="shrink-0 h-4 w-4" /> Примітка
+              <NotebookPen className="shrink-0 h-6 w-6" /> Примітка
             </label>
             <Textarea
               placeholder="Ваші думки про тренування"
@@ -401,7 +401,7 @@ export default function NewWorkoutPage() {
             />
           </div>
           <Button type="button" onClick={handleFinish} size="lg">
-            <Dumbbell className="shrink-0 h-4 w-4" />
+            <Dumbbell className="shrink-0 h-6 w-6" />
             Завершити тренування
           </Button>
           <Button
@@ -415,7 +415,7 @@ export default function NewWorkoutPage() {
             size="icon"
             className="absolute top-4 right-4"
           >
-            <X className="h-4 w-4 shrink-0" />
+            <X className="h-6 w-6 shrink-0" />
           </Button>
           <CommonCancelDialog open={dialogOpen} onOpenChange={setDialogOpen} />
         </div>

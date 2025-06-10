@@ -52,7 +52,7 @@ export function CommonCalendar({ onLinkClick }: CommonCalendarProps) {
         showOutsideDays
         modifiers={{ hasWorkout: workoutDates }}
         classNames={{
-          root: `${defaultClassNames.root} shadow-lg p-3`,
+          root: `${defaultClassNames.root} p-3`,
           day: `group ${defaultClassNames.day}`,
           caption_label: `text-base`,
           month_caption: `text-md font-bold pb-4`,
@@ -87,7 +87,7 @@ export function CommonCalendar({ onLinkClick }: CommonCalendarProps) {
       />
 
       {formattedDate && workoutsForDate.length > 0 ? (
-        <div className="p-4 shadow flex flex-col gap-3">
+        <div className="p-4 flex flex-col gap-3">
           {workoutsForDate.map((workout) => (
             <Link
               onClick={onLinkClick}
@@ -95,13 +95,13 @@ export function CommonCalendar({ onLinkClick }: CommonCalendarProps) {
               key={workout._id}
               className="w-full flex items-center gap-2 justify-between pb-3 border-b border-input last:border-b-0 last:pb-0"
             >
-              <div className="pl-2 font-medium">{workout.category}</div>
-              <ChevronRight className="w-4 h-4" />
+              <div className="pl-2 text-lg font-medium">{workout.category}</div>
+              <ChevronRight className="w-6 h-6" />
             </Link>
           ))}
         </div>
       ) : (
-        <p className="p-4 text-sm text-muted-foreground">
+        <p className="p-4 text-md text-muted-foreground">
           Немає тренувань {formattedDate}
         </p>
       )}

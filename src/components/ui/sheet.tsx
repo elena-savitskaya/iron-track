@@ -92,8 +92,8 @@ function SheetHeader({
       {...props}
     >
       <div className="flex-1">{children}</div>
-      <SheetPrimitive.Close className="rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
-        <XIcon className="size-5" />
+      <SheetPrimitive.Close className="h-[40px] w-[24px] flex items-center justify-center rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+        <XIcon />
       </SheetPrimitive.Close>
     </div>
   );

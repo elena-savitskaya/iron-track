@@ -57,18 +57,18 @@ export default function WorkoutsPage() {
           <TabsContent
             key={group.category}
             value={group.category}
-            className="flex flex-col gap-3"
+            className="flex flex-col gap-4"
           >
             <Accordion type="multiple">
               {group.workouts.map((workout) => (
                 <AccordionItem key={workout._id} value={workout._id}>
                   <AccordionTrigger>
-                    <span className="text-left w-full">{workout.date}</span>
+                    <span className="text-left text-md w-full">{workout.date}</span>
                   </AccordionTrigger>
                   <AccordionContent>
                     <div
                       key={workout._id}
-                      className="flex flex-col gap-2 border border-input px-3 py-4 rounded shadow-md bg-background relative"
+                      className="flex flex-col gap-3 border border-input px-3 py-4 rounded shadow-md bg-background relative"
                     >
                       <ul className="flex flex-col gap-3">
                         {workout.exercises.map((exercise, i) => {
@@ -78,7 +78,7 @@ export default function WorkoutsPage() {
 
                           return (
                             <li key={i} className="flex flex-col gap-2">
-                              <h3 className="font-medium">
+                              <h3 className="font-bold text-md">
                                 {i + 1}. {exercise.name}
                               </h3>
                               <Table>
@@ -133,8 +133,8 @@ export default function WorkoutsPage() {
                         })}
                       </ul>
                       <Link href={`/workouts/${workout._id}`} className="pt-2">
-                        <Button className="w-full" variant="outline" size="sm">
-                          <Info className="shrink-0 h-4 w-4" />
+                        <Button className="w-full" variant="outline">
+                          <Info className="shrink-0 h-6 w-6" />
                           Деталі
                         </Button>
                       </Link>

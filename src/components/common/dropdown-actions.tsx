@@ -23,16 +23,16 @@ export function CommonDropdownActions({
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="icon" className="bg-muted">
-            <MoreVertical className="w-4 h-4" />
+            <MoreVertical className="w-6 h-6" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem onClick={onEdit}>
-            <Pencil className="w-4 h-4" />
+            <Pencil className="w-6 h-6" />
             Редагувати
           </DropdownMenuItem>
           <DropdownMenuItem onClick={onDelete}>
-            <Trash2 className="w-4 h-4" />
+            <Trash2 className="w-6 h-6" />
             Видалити
           </DropdownMenuItem>
         </DropdownMenuContent>

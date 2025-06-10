@@ -95,10 +95,10 @@ export const LayoutDrawer = ({ children, user }: LayoutDrawerProps) => {
             <Link
               href="/progress"
               onClick={handleLinkClick}
-              className="flex items-center gap-2 justify-between text-md font-bold p-3"
+              className="flex items-center gap-2 justify-between text-lg font-bold p-3"
             >
               <span>Прогрес</span>
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-6 h-6" />
             </Link>
             <CommonCalendar onLinkClick={handleLinkClick} />
           </div>

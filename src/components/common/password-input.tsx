@@ -24,9 +24,9 @@ export const CommonPasswordInput = ({ ...props }: CommonPasswordInputProps) => {
         tabIndex={-1}
       >
         {showPassword ? (
-          <EyeOff className="h-4 w-4" />
+          <EyeOff className="h-6 w-6" />
         ) : (
-          <Eye className="h-4 w-4" />
+          <Eye className="h-6 w-6" />
         )}
       </button>
     </div>

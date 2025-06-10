@@ -70,7 +70,7 @@ export default function Register() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col gap-3"
+          className="flex flex-col gap-4"
         >
           <FormField
             control={form.control}
@@ -78,7 +78,7 @@ export default function Register() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  <Mail className="shrink-0 h-4 w-4" />
+                  <Mail className="shrink-0 h-6 w-6" />
                   Email
                 </FormLabel>
                 <FormControl>
@@ -107,7 +107,7 @@ export default function Register() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  <KeyRound className="shrink-0 h-4 w-4" />
+                  <KeyRound className="shrink-0 h-6 w-6" />
                   Пароль
                 </FormLabel>
                 <FormControl>

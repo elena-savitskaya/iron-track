@@ -149,16 +149,16 @@ export default function WorkoutDetailsPage({
           const totalWeight = calculateTotalWeight(exercise.sets);
           return (
             <li key={i}>
-              <h2 className="font-medium mb-2">
+              <h2 className="font-bold text-md mb-2">
                 {i + 1}. {exercise.name}
               </h2>
 
               {editingId === workout._id ? (
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   {editWorkout && editWorkout.exercises[i] && (
                     <>
                       {editWorkout.exercises[i].sets.map((set, j) => (
-                        <div key={j} className="flex gap-2 items-center">
+                        <div key={j} className="flex gap-3 items-center">
                           <Input
                             type="number"
                             placeholder="Повторення"
@@ -194,7 +194,7 @@ export default function WorkoutDetailsPage({
 
                               setEditWorkout(newWorkout);
                             }}
-                            className="cursor-pointer shrink-0 h-4 w-4"
+                            className="cursor-pointer shrink-0 h-6 w-6"
                           />
                         </div>
                       ))}
@@ -210,7 +210,7 @@ export default function WorkoutDetailsPage({
                           setEditWorkout(newWorkout);
                         }}
                       >
-                        <Plus className="shrink-0 h-4 w-4" /> Додати підхід
+                        <Plus className="shrink-0 h-6 w-6" /> Додати підхід
                       </Button>
                     </>
                   )}
@@ -250,7 +250,7 @@ export default function WorkoutDetailsPage({
         })}
       </ul>
       {editingId === workout._id && (
-        <div className="flex gap-2">
+        <div className="flex gap-3">
           <Button onClick={() => editWorkout && updateWorkout(editWorkout)}>
             Зберегти
           </Button>
@@ -266,13 +266,13 @@ export default function WorkoutDetailsPage({
         </div>
       )}
       {workout.note && (
-        <div className="text-sm text-muted-foreground flex items-center gap-2">
-          <NotebookPen className="shrink-0 h-4 w-4" />
+        <div className="text-sm text-muted-foreground flex items-center gap-6">
+          <NotebookPen className="shrink-0 h-6 w-6" />
           {workout.note}
         </div>
       )}
-      <div className="text-sm text-muted-foreground flex items-center gap-2">
-        <Clock className="shrink-0 h-4 w-4 text-chart-2" />
+      <div className="text-sm text-muted-foreground flex items-center gap-3">
+        <Clock className="shrink-0 h-6 w-6 text-chart-2" />
         {formatDuration(workout.duration)}
       </div>
       <CommonDeleteDialog

@@ -31,9 +31,9 @@ export function ModeToggle() {
       title="Переключити тему"
     >
       {currentTheme === "dark" ? (
-        <Sun className="h-4 w-4 rotate-0 scale-100 transition-transform" />
+        <Sun className="h-6 w-6 rotate-0 scale-100 transition-transform" />
       ) : (
-        <Moon className="h-4 w-4 rotate-0 scale-100 transition-transform" />
+        <Moon className="h-6 w-6 rotate-0 scale-100 transition-transform" />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>

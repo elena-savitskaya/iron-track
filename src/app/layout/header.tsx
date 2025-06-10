@@ -10,7 +10,7 @@ export const LayoutHeader = async () => {
   const user = session?.user;
 
   return (
-    <div className="relative w-full flex items-center justify-between px-4 h-[68px]">
+    <div className="relative w-full flex items-center justify-between px-4 h-[80px]">
       <LayoutLogo />
       <div className="flex gap-4 items-center justify-end w-full">
         <ModeToggle />

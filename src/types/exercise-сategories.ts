@@ -13,7 +13,7 @@ export const exerciseCategories: Record<string, ExerciseCategory> = {
     image: "/images/shoulders.png",
     exercises: [
       {
-        name: "Підйоми перед собою в смиті",
+        name: "Підйоми перед собою в сміті",
       },
       { name: "Гантелі сидячи" },
       { name: "Розведення в сторони" },
@@ -24,6 +24,18 @@ export const exerciseCategories: Record<string, ExerciseCategory> = {
         name: "Розведення в нахилі",
       },
       { name: "Шраги в смиті" },
+    ],
+  },
+  Груди: {
+    image: "/images/chest.png",
+    exercises: [
+      {
+        name: "Жим лежачи",
+      },
+      { name: "Розведення в блоці" },
+      {
+        name: "Розведення гантелями",
+      },
     ],
   },
   Ноги: {

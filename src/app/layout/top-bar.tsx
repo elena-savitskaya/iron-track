@@ -14,7 +14,7 @@ export const LayoutTopBar = () => {
 
   return (
     <div className="sticky top-0 z-30 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t border-input p-4 space-y-4">
-      <div className="flex gap-4 items-center rounded-3xl p-1 shadow-md border bg-muted">
+      <div className="w-full flex gap-4 items-center rounded-3xl p-1 shadow-md border bg-muted">
         {links.map(({ label, href }) => {
           const isActive = pathname === href;
           return (
@@ -22,7 +22,7 @@ export const LayoutTopBar = () => {
               asChild
               key={href}
               variant={isActive ? "default" : "outline"}
-              className="w-full sm:w-auto sm:px-6 py-2 rounded-3xl flex-1 basis-[calc(50%-0.5rem)]"
+              className="w-full rounded-3xl flex-1 basis-[calc(50%-0.5rem)]"
             >
               <Link href={href}>{label}</Link>
             </Button>
