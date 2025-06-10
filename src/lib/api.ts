@@ -55,7 +55,7 @@ export async function register(
   data: z.infer<typeof RegisterSchema>
 ): Promise<{ error?: string; success?: string }> {
   try {
-    const res = await fetch("/api/auth/register", {
+    const res = await fetch("/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
