@@ -22,7 +22,7 @@ export const AuthPageWrapper = ({
 }: AuthPageWrapperProps) => {
   return (
     <div className="text-foreground w-full p-6 flex flex-col gap-4 ">
-      <div className="z-10 w-full h-full p-6 rounded-2xl shadow-xl flex flex-col gap-6 border border-gray-300">
+      <div className="z-10 w-full h-full p-4 rounded-2xl shadow-xl flex flex-col gap-6 border border-gray-300">
         <LayoutLogo />
         <h1 className="text-xl font-bold text-center pt-2">{title}</h1>
         {children}

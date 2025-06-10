@@ -78,7 +78,7 @@ export default function WorkoutsPage() {
 
                           return (
                             <li key={i} className="flex flex-col gap-2">
-                              <h3 className="font-bold text-md">
+                              <h3 className="font-bold text-[16px]">
                                 {i + 1}. {exercise.name}
                               </h3>
                               <Table>

@@ -7,10 +7,10 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mx-auto max-w-screen-lg h-screen flex flex-col">
+    <div className="w-full h-full flex flex-col">
       <LayoutHeader />
       <LayoutTopBar />
-      <main className="flex-grow">{children}</main>
+      <div className="flex-grow">{children}</div>
     </div>
   );
 }
