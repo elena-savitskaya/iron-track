@@ -10,7 +10,7 @@ type CommonTimerProps = {
 
 export const CommonTimer = ({
   elapsedSeconds,
-  radius = 80,
+  radius = 60,
   stroke = 7,
 }: CommonTimerProps) => {
   const normalizedRadius = radius - stroke * 2;
@@ -58,7 +58,8 @@ export const CommonTimer = ({
         y="50%"
         textAnchor="middle"
         dy=".3em"
-        fontSize="14"
+        fontSize="16"
+        fontWeight="bold"
         fill="currentColor"
         transform={`rotate(90, ${radius}, ${radius})`}
         style={{

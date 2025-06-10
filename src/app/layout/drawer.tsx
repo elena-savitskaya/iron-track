@@ -54,8 +54,8 @@ export const LayoutDrawer = ({ children, user }: LayoutDrawerProps) => {
                     <Image
                       src={user.image || "/images/avatar.png"}
                       alt="User Avatar"
-                      width={40}
-                      height={40}
+                      width={50}
+                      height={50}
                       className="rounded-full"
                     />
                     {userInfoOpen ? (

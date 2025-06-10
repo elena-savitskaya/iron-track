@@ -57,7 +57,7 @@ export function CommonExerciseChart({
         textAnchor="middle"
         dominantBaseline="middle"
         fill="var(--secondary)"
-        style={{ fontSize: 12 }}
+        style={{ fontSize: 14 }}
       >
         {value}
       </text>
@@ -65,7 +65,7 @@ export function CommonExerciseChart({
   };
 
   return (
-    <div className="flex flex-col gap-2 border p-4 rounded shadow">
+    <div className="flex flex-col gap-3 border p-4 rounded shadow">
       <ResponsiveContainer width="100%" height={200}>
         <BarChart data={data}>
           <XAxis dataKey="date" />

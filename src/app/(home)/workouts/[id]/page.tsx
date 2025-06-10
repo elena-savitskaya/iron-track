@@ -250,7 +250,7 @@ export default function WorkoutDetailsPage({
         })}
       </ul>
       {editingId === workout._id && (
-        <div className="flex gap-3">
+        <div className="flex gap-3 mt-2">
           <Button onClick={() => editWorkout && updateWorkout(editWorkout)}>
             Зберегти
           </Button>

@@ -31,7 +31,7 @@ export default function ProgressWorkoutPage() {
     );
 
   return (
-    <div className="w-full p-4 flex flex-col gap-3">
+    <div className="w-full p-4 flex flex-col gap-4">
       <h1 className="text-xl font-bold">Прогрес тренувань</h1>
       <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
         <TabsList>
