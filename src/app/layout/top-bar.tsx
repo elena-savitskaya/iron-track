@@ -13,7 +13,7 @@ export const LayoutTopBar = () => {
   ];
 
   return (
-    <div className="sticky top-0 z-30 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t border-input p-4 space-y-4">
+    <div className="w-full bg-background border-t border-input p-4 space-y-4">
       <div className="w-full flex gap-4 items-center rounded-3xl p-1 shadow-md border bg-muted">
         {links.map(({ label, href }) => {
           const isActive = pathname === href;

@@ -176,7 +176,7 @@ export default function NewWorkoutPage() {
     <div className="w-full p-4 flex flex-col gap-4 relative">
       <h1 className="text-xl font-bold">Нове тренування</h1>
       {!category ? (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
           <label className="block text-lg font-medium">Група м’язів</label>
           <Select
             onValueChange={(value) => {
@@ -218,7 +218,7 @@ export default function NewWorkoutPage() {
               <label className="block text-lg">Група м’язів:</label>
               <h2 className="text-lg font-semibold">{category}</h2>
             </div>
-            <div className="flex flex-col items-center justify-center gap-3 py-2">
+            <div className="flex items-center justify-center py-2">
               <CommonTimer elapsedSeconds={elapsed} />
             </div>
           </div>

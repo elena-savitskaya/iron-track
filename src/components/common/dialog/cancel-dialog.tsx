@@ -30,7 +30,7 @@ export function CommonCancelDialog({
       title="Відмінити тренування?"
       description="Ви впевнені, що хочете відмінити це тренування?"
     >
-      <div className="flex justify-end gap-2">
+      <div className="flex justify-end gap-3">
         <Button variant="outline" onClick={() => onOpenChange(false)}>
           Скасувати
         </Button>

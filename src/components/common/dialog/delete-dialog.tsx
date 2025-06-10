@@ -23,7 +23,7 @@ export const CommonDeleteDialog = ({
       title="Видалити тренування?"
       description=" Ви впевнені, що хочете видалити це тренування?"
     >
-      <div className="flex justify-end gap-2">
+      <div className="flex justify-end gap-3">
         <Button variant="outline" onClick={onCancel}>
           Скасувати
         </Button>

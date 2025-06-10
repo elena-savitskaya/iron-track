@@ -31,7 +31,7 @@ export const CommonDialog = ({
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
         <DialogDescription>{description}</DialogDescription>
-        <div className="flex justify-end gap-2">{children}</div>
+        <div className="flex justify-end gap-3">{children}</div>
       </DialogContent>
     </Dialog>
   );

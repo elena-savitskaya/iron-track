@@ -86,7 +86,7 @@ function SheetHeader({
     <div
       data-slot="sheet-header"
       className={cn(
-        "sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-start border-b border-input justify-between py-6 px-4 shadow-md",
+        "sticky z-50 top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-start border-b border-input justify-between py-6 px-4 shadow-md",
         className
       )}
       {...props}

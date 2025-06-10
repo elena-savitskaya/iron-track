@@ -10,8 +10,8 @@ type CommonTimerProps = {
 
 export const CommonTimer = ({
   elapsedSeconds,
-  radius = 50,
-  stroke = 6,
+  radius = 80,
+  stroke = 7,
 }: CommonTimerProps) => {
   const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;
