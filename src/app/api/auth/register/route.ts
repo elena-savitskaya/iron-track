@@ -32,7 +32,14 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json(
-      { message: "Користувача успішно створено" },
+      {
+        message: "Користувача успішно створено",
+        user: {
+          id: user._id,
+          email: user.email,
+          name: user.name,
+        },
+      },
       { status: 201 }
     );
   } catch (error) {

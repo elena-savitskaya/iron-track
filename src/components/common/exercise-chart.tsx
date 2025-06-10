@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   LabelList,
   Cell,
+  LabelProps,
 } from "recharts";
 import { calculateTotalWeight } from "@/lib/utils/calculate-total-weight";
 import { Workout } from "@/types/workout";
@@ -44,9 +45,9 @@ export function CommonExerciseChart({
     width = 0,
     height = 0,
     value,
-  }: any) => {
-    const centerX = x + width / 2;
-    const centerY = y + height / 2;
+  }: LabelProps) => {
+    const centerX = Number(x) + Number(width) / 2;
+    const centerY = Number(y) + Number(height) / 2;
 
     return (
       <text

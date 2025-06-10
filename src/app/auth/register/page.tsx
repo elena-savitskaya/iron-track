@@ -93,7 +93,7 @@ export default function Register() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Ім\u2019я</FormLabel>
+                <FormLabel>Ім’я</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="Введіть ім'я" />
                 </FormControl>
@@ -111,7 +111,7 @@ export default function Register() {
                   Пароль
                 </FormLabel>
                 <FormControl>
-                  <CommonPasswordInput field={field} placeholder="******" />
+                  <CommonPasswordInput {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -124,7 +124,7 @@ export default function Register() {
               <FormItem>
                 <FormLabel>Підтвердьте пароль</FormLabel>
                 <FormControl>
-                  <CommonPasswordInput field={field} placeholder="******" />
+                  <CommonPasswordInput {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

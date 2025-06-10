@@ -2,22 +2,19 @@
 
 import { Input } from "@/components/ui/input";
 import { Eye, EyeOff } from "lucide-react";
-import { useState } from "react";
+import { InputHTMLAttributes, useState } from "react";
 
-type Props = {
-  field: any;
-  placeholder?: string;
-};
+type CommonPasswordInputProps = InputHTMLAttributes<HTMLInputElement>;
 
-export const CommonPasswordInput = ({ field, placeholder }: Props) => {
+export const CommonPasswordInput = ({ ...props }: CommonPasswordInputProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="relative">
       <Input
-        {...field}
+        {...props}
         type={showPassword ? "text" : "password"}
-        placeholder={placeholder || "******"}
+        placeholder="******"
         className="pr-10"
       />
       <button

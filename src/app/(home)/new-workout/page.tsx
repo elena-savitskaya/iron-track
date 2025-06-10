@@ -177,7 +177,7 @@ export default function NewWorkoutPage() {
       <h1 className="text-xl font-bold">Нове тренування</h1>
       {!category ? (
         <div className="flex flex-col gap-2">
-          <label className="block text-sm font-medium">Група м&#39;язів</label>
+          <label className="block text-sm font-medium">Група м’язів</label>
           <Select
             onValueChange={(value) => {
               setStartTime(0);
@@ -187,7 +187,7 @@ export default function NewWorkoutPage() {
             }}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Оберіть групу м&#39;язів" />
+              <SelectValue placeholder="Оберіть групу м’язів" />
             </SelectTrigger>
             <SelectContent>
               {Object.entries(exerciseCategories).map(([catName, catData]) => (
@@ -215,7 +215,7 @@ export default function NewWorkoutPage() {
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-              <label className="block text-lg">Група м&#39;язів:</label>
+              <label className="block text-lg">Група м’язів:</label>
               <h2 className="text-lg font-semibold">{category}</h2>
             </div>
             <div className="flex flex-col items-center justify-center gap-2 py-2">

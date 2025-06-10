@@ -71,6 +71,7 @@ export async function register(
 
     return { success: result.message || "Реєстрація успішна" };
   } catch (err) {
+    console.error("Register error:", err);
     return { error: "Сервер недоступний. Спробуйте пізніше." };
   }
 }

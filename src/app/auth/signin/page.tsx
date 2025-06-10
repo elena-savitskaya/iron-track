@@ -86,7 +86,7 @@ export default function SignIn() {
                   Пароль
                 </FormLabel>
                 <FormControl>
-                  <CommonPasswordInput field={field} placeholder="******" />
+                  <CommonPasswordInput {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
