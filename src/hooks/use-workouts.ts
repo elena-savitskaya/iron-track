@@ -40,14 +40,11 @@ export function useWorkouts() {
     );
 
     setGrouped(groupedArray);
-  }, [data]);
 
-  // 3. Встановлення початкової категорії
-  useEffect(() => {
-    if (grouped.length > 0 && !selectedCategory) {
-      setSelectedCategory(grouped[0].category);
+    if (groupedArray.length > 0 && !selectedCategory) {
+      setSelectedCategory(groupedArray[0].category);
     }
-  }, [grouped, selectedCategory]);
+  }, [data]);
 
   const updateSet = (
     workoutId: string,
