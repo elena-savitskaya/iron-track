@@ -62,6 +62,8 @@ export default function NewWorkoutPage() {
   const [customExerciseName, setCustomExerciseName] = useState<string>("");
 
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
+  const [editedName, setEditedName] = useState<string>("");
+  const [originalName, setOriginalName] = useState<string>("");
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [editedSets, setEditedSets] = useState<
     { reps: string; weight: string }[]
@@ -129,6 +131,8 @@ export default function NewWorkoutPage() {
   const startEditing = (index: number) => {
     const ex = savedExercises[index];
     setEditingIndex(index);
+    setEditedName(ex.name);
+    setOriginalName(ex.name);
     setEditedSets(ex.sets.map((s) => ({ ...s })));
     setOriginalSets(ex.sets.map((s) => ({ ...s })));
   };
@@ -136,6 +140,7 @@ export default function NewWorkoutPage() {
   const cancelEditing = () => {
     if (editingIndex !== null) {
       setEditedSets(originalSets.map((s) => ({ ...s })));
+      setEditedName(originalName);
     }
     setEditingIndex(null);
   };
@@ -150,6 +155,7 @@ export default function NewWorkoutPage() {
     } else {
       updatedExercises[editingIndex] = {
         ...updatedExercises[editingIndex],
+        name: editedName.trim(),
         sets: editedSets,
       };
     }
@@ -306,10 +312,15 @@ export default function NewWorkoutPage() {
                   }}
                 />
                 {editingIndex === index ? (
-                  <div className="flex flex-col gap-3">
-                    <strong>{ex.name}</strong>
+                  <div className="flex flex-col gap-3 pt-11">
+                    <Input
+                      placeholder="Назва вправи"
+                      value={editedName}
+                      onChange={(e) => setEditedName(e.target.value)}
+                      required
+                    />
                     {editedSets.map((set, idx) => (
-                      <div key={idx} className="flex gap-2 items-center pt-3">
+                      <div key={idx} className="flex gap-2 items-center">
                         <Input
                           type="number"
                           placeholder="Повторення"

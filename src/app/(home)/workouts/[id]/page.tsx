@@ -149,9 +149,23 @@ export default function WorkoutDetailsPage({
           const totalWeight = calculateTotalWeight(exercise.sets);
           return (
             <li key={i}>
-              <h2 className="font-bold text-md mb-2">
-                {i + 1}. {exercise.name}
-              </h2>
+              {editingId === workout._id ? (
+                <Input
+                  value={editWorkout?.exercises[i].name || ""}
+                  onChange={(e) => {
+                    if (!editWorkout) return;
+                    const newWorkout = structuredClone(editWorkout);
+                    newWorkout.exercises[i].name = e.target.value;
+                    setEditWorkout(newWorkout);
+                  }}
+                  className="mb-2 font-bold text-md"
+                  placeholder={`Назва вправи ${i + 1}`}
+                />
+              ) : (
+                <h2 className="font-bold text-md mb-2">
+                  {i + 1}. {exercise.name}
+                </h2>
+              )}
 
               {editingId === workout._id ? (
                 <div className="flex flex-col gap-3">
