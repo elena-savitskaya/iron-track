@@ -15,7 +15,11 @@ export const LayoutHeader = async () => {
       <div className="flex gap-4 items-center justify-end w-full">
         <ModeToggle />
         <LayoutDrawer user={user}>
-          <Menu width={24} height={24} className="cursor-pointer" />
+          <button
+            className="rounded-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          >
+            <Menu className="h-[24px] w-[24px]" />
+          </button>
         </LayoutDrawer>
       </div>
     </div>
