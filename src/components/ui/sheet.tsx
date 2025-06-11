@@ -86,15 +86,17 @@ function SheetHeader({
     <div
       data-slot="sheet-header"
       className={cn(
-        "sticky z-50 top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-start border-b border-input justify-between py-6 px-4 shadow-md",
+        "sticky z-50 top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-start border-b border-input justify-between p-4 shadow-md",
         className
       )}
       {...props}
     >
       <div className="flex-1">{children}</div>
-      <SheetPrimitive.Close className="h-[40px] w-[24px] flex items-center justify-center rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
-        <XIcon />
-      </SheetPrimitive.Close>
+      <div className="h-[50px] w-[24px] flex items-center justify-center">
+        <SheetPrimitive.Close className="h-[24px] w-[24px] rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+          <XIcon />
+        </SheetPrimitive.Close>
+      </div>
     </div>
   );
 }
