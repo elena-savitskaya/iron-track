@@ -13,6 +13,7 @@ export type Workout = {
   }[];
   note?: string;
   duration: number;
+  createdAt: string;
 };
 
 export interface GroupedByCategory {

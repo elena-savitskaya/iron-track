@@ -63,7 +63,9 @@ export default function WorkoutsPage() {
               {group.workouts.map((workout) => (
                 <AccordionItem key={workout._id} value={workout._id}>
                   <AccordionTrigger>
-                    <span className="text-left text-md w-full">{workout.date}</span>
+                    <span className="text-left text-md w-full">
+                      {workout.date}
+                    </span>
                   </AccordionTrigger>
                   <AccordionContent>
                     <div

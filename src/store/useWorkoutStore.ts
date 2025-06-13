@@ -26,7 +26,6 @@ interface WorkoutState {
   resetWorkout: () => void;
   setDuration: (duration: number) => void;
   setStartTime: (time: number) => void;
-
   getElapsed: () => number;
 }
 
@@ -41,10 +40,8 @@ export const useWorkoutStore = create<WorkoutState>()(
       startTime: null,
 
       setCategory: (category, image) => set({ category, categoryImage: image }),
-
       addExercise: (exercise) =>
         set((state) => ({ exercises: [...state.exercises, exercise] })),
-
       setNote: (note) => set({ note }),
       setDuration: (duration) => set({ duration }),
       setStartTime: (time) => {

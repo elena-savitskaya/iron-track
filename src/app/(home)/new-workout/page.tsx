@@ -164,7 +164,8 @@ export default function NewWorkoutPage() {
     setEditingIndex(null);
   };
 
-  const { getExercisesByCategory } = useWorkouts();
+  const { getExercisesByCategory, getSetsFromLastWorkoutForExercise } =
+    useWorkouts();
   const backendExercises = getExercisesByCategory(category);
   const predefinedExercises = exerciseCategories[category]?.exercises || [];
   const predefinedNames = predefinedExercises.map((ex) => ex.name);
@@ -177,6 +178,11 @@ export default function NewWorkoutPage() {
     ...predefinedExercises,
     ...extraExercises.map((name) => ({ name })),
   ];
+
+  const previousSets =
+    exerciseName && exerciseName !== "custom"
+      ? getSetsFromLastWorkoutForExercise(category, exerciseName)
+      : [];
 
   return (
     <div className="w-full p-4 flex flex-col gap-4 relative">
@@ -255,6 +261,19 @@ export default function NewWorkoutPage() {
                 onChange={(e) => setCustomExerciseName(e.target.value)}
                 required
               />
+            )}
+
+            {previousSets.length > 0 && (
+              <div className="p-3 border rounded-md">
+                <p className="font-semibold">Сети з попереднього тренування:</p>
+                <ul className="list-disc list-inside text-sm">
+                  {previousSets.map((set, idx) => (
+                    <li key={idx}>
+                      {set.reps} повторень × {set.weight} кг
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
 
             {sets.map((set, idx) => (

@@ -135,6 +135,29 @@ export function useWorkouts() {
     return uniqueNames;
   };
 
+  const getSetsFromLastWorkoutForExercise = (
+    category: string,
+    exerciseName: string
+  ) => {
+    const workoutsForCategory = grouped.find((g) => g.category === category);
+    if (!workoutsForCategory) return [];
+
+    const sortedWorkouts = [...workoutsForCategory.workouts].sort(
+      (a, b) =>
+        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+    );
+
+    for (let i = sortedWorkouts.length - 1; i >= 0; i--) {
+      const workout = sortedWorkouts[i];
+      const exercise = workout.exercises.find((ex) => ex.name === exerciseName);
+      if (exercise) {
+        return exercise.sets;
+      }
+    }
+
+    return [];
+  };
+
   return {
     data,
     setData,
@@ -146,5 +169,6 @@ export function useWorkouts() {
     removeSet,
     addSet,
     getExercisesByCategory,
+    getSetsFromLastWorkoutForExercise,
   };
 }
