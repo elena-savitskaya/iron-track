@@ -1,6 +1,6 @@
 # 🌐 Iron Track App
 
-Iron Track – Full-stack fitness tracker built with Next.js Next.js 15, MongoDB, and NextAuth. Implemented secure authentication, workout session tracking with custom exercises, and data visualization via Recharts. Used Zustand for local state and Mongoose for persistent storage. Built responsive UI with Tailwind CSS and Radix UI.
+Iron Track – Full-stack fitness tracker built with Next.js 15, MongoDB and NextAuth. Implemented secure authentication, workout session tracking with custom exercises, and data visualization via Recharts. Used Zustand for local state and Mongoose for persistent storage. Built responsive UI with Tailwind CSS and Shadcn UI.
 
 ## 📋 Project Overview
 
