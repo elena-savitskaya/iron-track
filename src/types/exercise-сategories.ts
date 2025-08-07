@@ -49,10 +49,7 @@ export const exerciseCategories: Record<string, ExerciseCategory> = {
   },
   Спина: {
     image: "/images/back.png",
-    exercises: [
-      { name: "Станова тяга" },
-      { name: "Тяга гантелі в нахилі" },
-    ],
+    exercises: [{ name: "Станова тяга" }],
   },
   Руки: {
     image: "/images/arms.png",
