@@ -33,6 +33,7 @@ import { calculateTotalWeight } from "@/lib/utils/calculate-total-weight";
 import { useWorkoutTimer } from "@/hooks/use-workout-timer";
 import { useSets } from "@/hooks/use-sets";
 import { useWorkouts } from "@/hooks/use-workouts";
+import { toastError } from "@/lib/toast";
 
 export default function NewWorkoutPage() {
   const router = useRouter();
@@ -96,6 +97,11 @@ export default function NewWorkoutPage() {
   };
 
   const handleFinish = async () => {
+    if (!savedExercises || savedExercises.length === 0) {
+      toastError("Немає жодної вправи, тренування не буде збережене");
+      return;
+    }
+
     const finalWorkout = {
       category,
       exercises: savedExercises,
